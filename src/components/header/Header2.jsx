@@ -2,7 +2,7 @@ import { Container, InputBase, useTheme } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Badge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import { useState } from "react";
@@ -21,7 +21,7 @@ const Search = styled("div")(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   border: "1px solid #777",
   "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    border: "1px solid #333",
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
@@ -67,7 +67,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 const Header2 = () => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedIndex, setSelectedIndex] = useState(1);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const open = Boolean(anchorEl);
   const handleClickListItem = (event) => {
     setAnchorEl(event.currentTarget);
