@@ -3,6 +3,8 @@ import {
   Box,
   Container,
   IconButton,
+  ListItemIcon,
+  ListItemText,
   Typography,
   useTheme,
 } from "@mui/material";
@@ -13,6 +15,12 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import WindowIcon from "@mui/icons-material/Window";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
+import {
+  ElectricBikeOutlined,
+  LaptopChromebookOutlined,
+  MenuBookOutlined,
+  SportsEsportsOutlined,
+} from "@mui/icons-material";
 
 const Header3 = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -67,10 +75,37 @@ const Header3 = () => {
           MenuListProps={{
             "aria-labelledby": "basic-button",
           }}
+          sx={{
+            ".MuiPaper-root": {
+              width: 222,
+              bgcolor: theme.palette.inpColor.main,
+            },
+          }}
         >
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>My account</MenuItem>
-          <MenuItem onClick={handleClose}>Logout</MenuItem>
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <ElectricBikeOutlined fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Bikes</ListItemText>
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <LaptopChromebookOutlined fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Electronics</ListItemText>
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <MenuBookOutlined fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Books</ListItemText>
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+            <ListItemIcon>
+              <SportsEsportsOutlined fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Games</ListItemText>
+          </MenuItem>
         </Menu>
       </Box>
       <IconButton>
