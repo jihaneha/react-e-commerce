@@ -16,11 +16,17 @@ import MenuIcon from "@mui/icons-material/Menu";
 import WindowIcon from "@mui/icons-material/Window";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import {
+  Close,
   ElectricBikeOutlined,
   LaptopChromebookOutlined,
   MenuBookOutlined,
   SportsEsportsOutlined,
 } from "@mui/icons-material";
+import Drawer from "@mui/material/Drawer";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Header3 = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -32,6 +38,24 @@ const Header3 = () => {
     setAnchorEl(null);
   };
   const theme = useTheme();
+
+  const [state, setState] = useState({
+    top: true,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
   return (
     <Container
       className="my-3"
@@ -108,9 +132,40 @@ const Header3 = () => {
           </MenuItem>
         </Menu>
       </Box>
-      <IconButton>
+      {/* <IconButton onClick={toggleDrawer("top", true)}>
         <MenuIcon />
-      </IconButton>
+      </IconButton> */}
+      {/* <Drawer
+        anchor={"top"}
+        open={state["top"]}
+        onClose={toggleDrawer("top", false)}
+        sx={{ ".MuiPaper-root": { height: "100%" } }}
+      >
+        <Box className="border-2 border-rose-500 max-w-md mx-auto mt-6 relative pt-10">
+          <IconButton
+            className="absolute top-0 right-0"
+            onClick={toggleDrawer("top", false)}
+          >
+            <Close />
+          </IconButton>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>Accordion 1</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
+                eget.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        </Box>
+      </Drawer> */}
     </Container>
   );
 };
