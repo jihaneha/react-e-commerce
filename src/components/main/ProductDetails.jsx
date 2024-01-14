@@ -9,13 +9,15 @@ const ProductDetails = () => {
         alignItems: "center",
         gap: 2.5,
         flexDirection: { xs: "column", sm: "row" },
+        px: 3,
+        py: 3,
       }}
     >
-      <Box sx={{ display: "flex", px: 3 }}>
+      <Box sx={{ display: "flex" }}>
         <img width={300} src="src/images/1.jpg" alt="" />
       </Box>
 
-      <Box sx={{ textAlign: { xs: "center", sm: "left" }, py: 3 }}>
+      <Box sx={{ textAlign: { xs: "center", sm: "left" } }}>
         <Typography variant="h5">WOMEN'S FASHION</Typography>
         <Typography my={0.4} fontSize={"22px"} color={"crimson"} variant="h6">
           $12.99

@@ -9,10 +9,12 @@ import {
 } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "./slider.css";
+
 import IconSection from "./IconSection";
 
 const mySlider = [
