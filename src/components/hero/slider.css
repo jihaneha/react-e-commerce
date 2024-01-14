@@ -22,9 +22,33 @@
   object-fit: cover;
 }
 
+.swiper-slide:hover{
+  cursor: grab;
+}
+
+.swiper-slide:active{
+  cursor: grabbing;
+}
+
 .swiper-button-next{
   color: black;
 }
 .swiper-button-prev{
   color: black;
 }
+
+@media (max-width: 600px) {
+  
+  .parent-slider img {
+    display: none;
+
+  }
+  .swiper-button-next{
+    display: none;
+  }
+  .swiper-button-prev{
+    display: none;
+  }
+
+
+  }

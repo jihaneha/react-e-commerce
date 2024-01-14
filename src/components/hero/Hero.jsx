@@ -13,8 +13,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./slider.css";
-
-// import IconSection from "./IconSection";
+import IconSection from "./IconSection";
 
 const mySlider = [
   { text: "MEN", link: "src/images/banner-15.jpg" },
@@ -28,7 +27,12 @@ const Hero = () => {
       <Box
         sx={{ pt: 2, mt: 2.5, display: "flex", alignItems: "center", gap: 2 }}
       >
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+        <Swiper
+          navigation={true}
+          loop={true}
+          modules={[Navigation]}
+          className="mySwiper"
+        >
           {mySlider.map((item) => {
             return (
               <SwiperSlide key={item.link} className="parent-slider">
@@ -217,7 +221,7 @@ const Hero = () => {
                 LAPTOPS
               </Typography>
 
-              {/* <Link
+              <Link
                 sx={{
                   color: "#2B3445",
                   display: "flex",
@@ -233,14 +237,14 @@ const Hero = () => {
                 underline="none"
               >
                 shop now
-                <ArrowForwardIcon sx={{ fontSize: "13px" }} />
-              </Link> */}
+                {/* <ArrowForwardIcon sx={{ fontSize: "13px" }} /> */}
+              </Link>
             </Stack>
           </Box>
         </Box>
       </Box>
 
-      {/* <IconSection /> */}
+      <IconSection />
     </Container>
   );
 };
