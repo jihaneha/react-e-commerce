@@ -6,6 +6,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Hero from "./components/hero/Hero";
 import Header3 from "./components/header/Header3";
 import Main from "./components/main/main";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -21,6 +22,7 @@ function App() {
           <Hero />
           <Main />
         </Box>
+        <Footer />
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

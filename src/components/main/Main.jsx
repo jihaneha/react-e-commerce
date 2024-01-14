@@ -99,56 +99,64 @@ const Main = () => {
         flexWrap={"wrap"}
         justifyContent={"space-between"}
       >
-        <Card
-          sx={{
-            maxWidth: 333,
-            mt: 6,
-            ":hover .MuiCardMedia-root ": {
-              rotate: "1deg",
-              scale: "1.1",
-              transition: "0.35s",
-            },
-          }}
-        >
-          <CardMedia
-            sx={{ height: 277 }}
-            image="https://mui.com//static/images/cards/paella.jpg"
-            title="green iguana"
-          />
-
-          <CardContent>
-            <Stack
-              direction={"row"}
-              justifyContent={"space-between"}
-              alignItems={"center"}
+        {["aaa", "bbb", "ccc"].map((item) => {
+          return (
+            <Card
+              key={item}
+              sx={{
+                maxWidth: 333,
+                mt: 6,
+                ":hover .MuiCardMedia-root ": {
+                  rotate: "1deg",
+                  scale: "1.1",
+                  transition: "0.35s",
+                },
+              }}
             >
-              <Typography gutterBottom variant="h6" component="div">
-                aaa
-              </Typography>
+              <CardMedia
+                sx={{ height: 277 }}
+                image="https://mui.com//static/images/cards/paella.jpg"
+                title="green iguana"
+              />
 
-              <Typography variant="subtitle1" component="p">
-                $4
-              </Typography>
-            </Stack>
+              <CardContent>
+                <Stack
+                  direction={"row"}
+                  justifyContent={"space-between"}
+                  alignItems={"center"}
+                >
+                  <Typography gutterBottom variant="h6" component="div">
+                    aaa
+                  </Typography>
 
-            <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
-          </CardContent>
+                  <Typography variant="subtitle1" component="p">
+                    $4
+                  </Typography>
+                </Stack>
 
-          <CardActions sx={{ justifyContent: "space-between" }}>
-            <Button
-              onClick={handleClickOpen}
-              sx={{ textTransform: "capitalize" }}
-              size="large"
-            >
-              <AddShoppingCartOutlinedIcon sx={{ mr: 1 }} fontSize="small" />
-              add to cart
-            </Button>
-            <Rating precision={0.1} name="read-only" value={4} readOnly />
-          </CardActions>
-        </Card>
+                <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over
+                  6,000 species, ranging across all continents except Antarctica
+                </Typography>
+              </CardContent>
+
+              <CardActions sx={{ justifyContent: "space-between" }}>
+                <Button
+                  onClick={handleClickOpen}
+                  sx={{ textTransform: "capitalize" }}
+                  size="large"
+                >
+                  <AddShoppingCartOutlinedIcon
+                    sx={{ mr: 1 }}
+                    fontSize="small"
+                  />
+                  add to cart
+                </Button>
+                <Rating precision={0.1} name="read-only" value={4} readOnly />
+              </CardActions>
+            </Card>
+          );
+        })}
       </Stack>
 
       <Dialog
