@@ -8,11 +8,10 @@ import {
   useTheme,
 } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-
+import { Navigation } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./slider.css";
 
 // import IconSection from "./IconSection";
@@ -29,14 +28,7 @@ const Hero = () => {
       <Box
         sx={{ pt: 2, mt: 2.5, display: "flex", alignItems: "center", gap: 2 }}
       >
-        <Swiper
-          loop={true}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
-        >
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {mySlider.map((item) => {
             return (
               <SwiperSlide key={item.link} className="parent-slider">
@@ -125,13 +117,13 @@ const Hero = () => {
         </Swiper>
 
         <Box sx={{ display: { xs: "none", md: "block", minWidth: "26.6%" } }}>
-          <Box sx={{ position: "relative" }}>
+          <Box sx={{ position: "relative", marginBottom: "0.5rem" }}>
             <img width={"100%"} src="src/images/banner-17.jpg" alt="" />
 
             <Stack
               sx={{
                 position: "absolute",
-                top: "50%",
+                top: "40%",
                 transform: "translateY(-50%)",
                 left: 31,
               }}
@@ -164,7 +156,7 @@ const Hero = () => {
                 SALE 20% OFF
               </Typography>
 
-              {/* <Link
+              <Link
                 sx={{
                   color: "#2B3445",
                   display: "flex",
@@ -180,8 +172,8 @@ const Hero = () => {
                 underline="none"
               >
                 shop now
-                <ArrowForwardIcon sx={{ fontSize: "13px" }} />
-              </Link> */}
+                {/* <ArrowForwardIcon sx={{ fontSize: "13px" }} /> */}
+              </Link>
             </Stack>
           </Box>
 
@@ -190,7 +182,7 @@ const Hero = () => {
             <Stack
               sx={{
                 position: "absolute",
-                top: "50%",
+                top: "40%",
                 transform: "translateY(-50%)",
                 left: 31,
               }}
