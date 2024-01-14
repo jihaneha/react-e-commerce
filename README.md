@@ -16,5 +16,7 @@ Getting Started
 
 
 Install dependencies: npm install
+
 Set up Strapi backend 
+
 Start the frontend: npm run dev
