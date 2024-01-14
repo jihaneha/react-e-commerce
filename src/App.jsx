@@ -18,7 +18,7 @@ function App() {
         <CssBaseline />
         <Header1 />
         <Header2 />
-        <Header3 />
+        {/* <Header3 /> */}
         <Box bgcolor={theme.palette.bg.main}>
           <Hero />
           <Main />
