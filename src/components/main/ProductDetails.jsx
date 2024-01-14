@@ -11,11 +11,11 @@ const ProductDetails = () => {
         flexDirection: { xs: "column", sm: "row" },
       }}
     >
-      <Box sx={{ display: "flex" }}>
+      <Box sx={{ display: "flex", px: 3 }}>
         <img width={300} src="src/images/1.jpg" alt="" />
       </Box>
 
-      <Box sx={{ textAlign: { xs: "center", sm: "left" } }}>
+      <Box sx={{ textAlign: { xs: "center", sm: "left" }, py: 3 }}>
         <Typography variant="h5">WOMEN'S FASHION</Typography>
         <Typography my={0.4} fontSize={"22px"} color={"crimson"} variant="h6">
           $12.99
