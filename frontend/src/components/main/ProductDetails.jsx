@@ -2,6 +2,8 @@ import { AddShoppingCartOutlined } from "@mui/icons-material";
 import { Box, Button, Stack, Typography } from "@mui/material";
 
 const ProductDetails = () => {
+
+  
   return (
     <Box
       sx={{
