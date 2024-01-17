@@ -106,7 +106,6 @@ coverage
 ############################
 
 .env
-email.txt
 license.txt
 exports
 .strapi

@@ -23,8 +23,8 @@
       "required": true
     },
     "productPrice": {
-      "required": true,
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "productDescription": {
       "type": "text",
